@@ -1,0 +1,64 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.page-footer-bottom {
+  padding: 15px 0;
+
+  border-top: 1px solid var.$color-border;
+}
+
+.page-footer-bottom__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  @media (min-width: var.$tablet-width) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer-bottom__country {
+  margin: 0 40px 0 0;
+  max-width: 180px;
+}
+
+.page-footer-bottom__links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 5px;
+  max-width: 940px;
+}
+
+.page-footer-bottom__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &--underline {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.page-footer-bottom__link:not(.page-footer-bottom__link--underline) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  column-gap: 5px;
+}
+
+.page-footer-bottom__link:not(.page-footer-bottom__link--underline):not(:last-child)::after {
+  content: "|";
+}

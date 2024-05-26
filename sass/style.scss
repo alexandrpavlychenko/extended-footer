@@ -1,0 +1,18 @@
+/* GLOBAL */
+@use "global/fonts.scss";
+@use "global/variables.scss" as var;
+@use "global/mixins.scss" as mixin;
+@use "global/global-selectors.scss";
+
+/* HELPERS */
+@use "helpers/visually-hidden.scss";
+@use "helpers/container.scss";
+
+/* BLOCKS */
+@use "blocks/page.scss";
+@use "blocks/page-footer.scss";
+@use "blocks/logo-footer.scss";
+@use "blocks/socials-list.scss";
+@use "blocks/payments-list.scss";
+@use "blocks/mobile-devices-list.scss";
+@use "blocks/page-footer-bottom.scss";

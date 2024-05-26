@@ -1,0 +1,15 @@
+@use "fonts.scss";
+
+$main-font: "Open Sans", "Arial", sans-serif;
+
+$normal: 400;
+$semibold: 600;
+
+$color-main-bg: #e5e5e5;
+$color-footer-bg: #fcfcfc;
+$color-main-text: #212121;
+$color-border: rgba(0, 0, 0, 0.2);
+
+$tablet-width: 768px;
+$desktop-width: 1366px;
+$double-density: 2dppx;

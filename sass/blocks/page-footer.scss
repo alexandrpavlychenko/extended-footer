@@ -1,0 +1,129 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.page-footer {
+  background-color: var.$color-footer-bg;
+}
+
+.page-footer__top {
+  padding: 50px 0;
+}
+
+.page-footer__top-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 70px;
+  row-gap: 40px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 992px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    display: grid;
+    grid-template-columns: 157px 166px 183px 198px 144px;
+    column-gap: 30px;
+    justify-content: space-between;
+    max-width: 1366px;
+  }
+}
+
+.page-footer__column {
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 215px;
+  }
+}
+
+.page-footer__logo {
+  margin: 0 auto 15px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 15px;
+  }
+}
+
+.page-footer__text {
+  margin: 0 0 20px;
+  max-width: 198px;
+
+  @include mixin.font-footer-text;
+}
+
+.page-footer__socials-list {
+  margin: 0;
+}
+
+.page-footer__column-title {
+  margin: 0 0 20px;
+
+  @include mixin.font-footer-subtitle;
+}
+
+.page-footer__column-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @include mixin.list-reset;
+}
+
+.page-footer__column-link {
+  @include mixin.font-footer-links-large;
+  text-decoration: underline;
+
+  @media (min-width: var.$desktop-width) {
+    text-decoration: none;
+  }
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__payments-list {
+  margin: 0 0 15px;
+}
+
+.page-footer__text-link {
+  @include mixin.font-footer-text;
+
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__mobile-devices-list {
+  margin: 23px 0 0;
+}

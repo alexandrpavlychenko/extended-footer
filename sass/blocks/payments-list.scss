@@ -1,0 +1,26 @@
+@use "../global/fonts.scss";
+@use "../global/variables.scss" as var;
+@use "../global/mixins.scss" as mixin;
+
+.payments-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 5px;
+  padding: 0;
+  list-style-type: none;
+  max-width: 198px;
+
+  @media (min-width: var.$tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.payments-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+}
